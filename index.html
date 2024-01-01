@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Front aquaprogit</title>
+    <style>
+        body{
+            background-color: #141414;
+            color: #fefefe;
+            padding: 10px 20px;
+        }
+        .link-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 300px;
+        }
+
+        .link-container a{
+            color: #fefefe;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 35px;
+            border-radius: 5px;
+            background-color: #1e1e1e;
+            width: fit-content;
+            transition: background-color 0.2s ease-in-out;
+            position: relative;
+        }
+
+        .link-container a:hover{
+            background-color: #2e2e2e;
+        }
+
+        .link-container a span.tooltip {
+            font-size: medium;
+            visibility: hidden;
+            width: 200px;
+            max-width: 300px;
+            background-color: #fefefe;
+            color: #141414;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 50%;
+            transform: translateX(10%);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .link-container a:hover span.tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h2>Front-end laboratory works of aquaprogit ('Vladislav Golovatyuk')</h2>
+    <div class="link-container">
+        <a href="/lab1">Lab1
+            <span class="tooltip">
+                Мова гіпертекстової розмітки сайту HTML-5
+            </span>
+        </a>
+        <a href="/lab2">Lab2
+            <span class="tooltip">
+                Таблиці.
+                Каскадна таблиця стилів CSS-3
+            </span></a>
+        <a href="/lab3">Lab3
+            <span class="tooltip">
+                Блочна верстка макету сайту за допомогою HTML і CSS
+            </span>
+        </a>
+        <a href="/lab4">Lab4
+            <span class="tooltip">
+                Доступ до об'єктів і сценаріям. Доступ до властивостей і методів об'єктів
+            </span>
+        </a>
+        <a href="/lab5">Lab5
+            <span class="tooltip">
+                JavaScript. «Події. Регулярні вирази»
+            </span>
+        </a>
+        <a href="/lab6">
+            Lab6
+            <span class="tooltip">
+                JavaScript. Формат JSON. API. Отримання даних із зовнішньої сторінки (fetch, promise)
+            </span>
+        </a>
+        <a href="/lab7">
+            Lab7
+            <span class="tooltip">
+                Робота з React.JS. Створення та робота з компонентами. Робота з props.
+            </span>
+        </a>
+    </div>
+</body>
+</html>
