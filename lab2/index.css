@@ -1,0 +1,31 @@
+.signature-table {
+    width: max-content;
+    border-collapse: collapse;
+}
+
+.signature-table td {
+    min-width: 120px;
+    height: 30px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.signature-table tr:first-child {
+    background-color: #048f8f;
+    color: #060805;
+}
+
+.signature-table tr:first-child:hover {
+    background-color: #8f451a;
+    color: #ebebeb;
+}
+
+.signature-table tr:nth-child(2) {
+    background-color: #f5f504;
+    color: #000;
+}
+
+.signature-table tr:nth-child(2):hover {
+    background-color: #8e2af5;
+    color: #ebebeb;
+}

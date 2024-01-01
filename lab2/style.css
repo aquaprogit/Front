@@ -1,0 +1,47 @@
+.crosshair {
+    margin: 50px;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border: 20px solid #000;
+    border-radius: 50%;
+}
+
+.crosshair::before,
+.crosshair::after {
+    content: "";
+    position: absolute;
+    background-color: #000;
+}
+
+.crosshair::before {
+    width: 175%;
+    height: 5px;
+    top: 50%;
+    left: 0;
+    transform: translate(-22%, -50%);
+}
+
+.crosshair::after {
+    height: 175%;
+    width: 5px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -22%);
+}
+
+.crosshair::before,
+.crosshair::after {
+    border-radius: 2px;
+}
+
+.center-circle {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #000;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
