@@ -25,9 +25,5 @@ function validateForm() {
         }
     });
 
-    if (isValid) {
-        alert("Form submitted successfully!");
-    } else {
-        alert("Please correct the highlighted errors.");
-    }
+    alert(isValid ? "Form submitted successfully!" : "Please correct the highlighted errors.");
 }
