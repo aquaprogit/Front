@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form id="myForm">
+            <label for="fullName">ПІБ</label>
+            <input type="text" id="fullName" name="fullName" pattern="[А-ЯІЇЄ][а-яіїє]+\s[А-ЯІЇЄ]\.[А-ЯІЇЄ]\." required>
+
+            <label for="idCard">ID-card</label>
+            <input type="text" id="idCard" name="idCard" pattern="[А-ЯІЇЄ][А-ЯІЇЄЁё0-9]{5}" required>
+
+            <label for="faculty">Факультет</label>
+            <input type="text" id="faculty" name="faculty" pattern="[А-ЯІЇЄ][а-яіїє]+" required>
+
+            <label for="dob">Дата народж.</label>
+            <input type="text" id="dob" name="dob" pattern="\d{2}\.\d{2}\.\d{4}" placeholder="ЧЧ.ЧЧ.ЧЧЧЧ" required>
+
+            <label for="address">Адреса</label>
+            <input type="text" id="address" name="address" pattern="м\.\s[А-ЯІЇЄ][А-ЯІЇЄЁёа-яіїє0-9]+" required>
+
+            <button type="button" onclick="validateForm()">Submit</button>
+        </form>
+        <div class="table-div">
+            <table id="myTable">
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="validation.js"></script>
+    <script src="table.js"></script>
+</body>
+
+</html>
