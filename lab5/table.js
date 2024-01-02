@@ -9,8 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (i * 6 + j + 1 === 4) {
                 cell.addEventListener("click", function () {
-                    var colorPalette = ["#FF5733", "#33FF57", "#5733FF", "#FFFF33", "#33FFFF", "#FF33FF"];
-                    changeColor(this, colorPalette[Math.floor(Math.random() * 6)]);
+                    openColorPicker(this);
                 });
 
                 cell.addEventListener("dblclick", function () {
@@ -18,6 +17,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
         }
+    }
+
+    function openColorPicker(cell) {
+        var colorInput = document.getElementById("color-input");
+
+        colorInput.style.top = cell.offsetTop + "px";
+        colorInput.style.left = cell.offsetLeft + "px";
+
+        colorInput.addEventListener("input", function () {
+            changeColor(cell, this.value);
+        });
+        colorInput.focus();
+        colorInput.click();
+
+        document.addEventListener("click", function (event) {
+            if (event.target !== colorInput) {
+                colorInput.style.opacity = "0";
+            }
+        });
     }
 
     function changeColor(element, color) {
